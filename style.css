@@ -1,0 +1,15 @@
+.subheading {
+  font-size: 200%; 
+}
+
+
+#title {
+  font-size: 400%;
+  text-align: center; 
+
+}
+
+.buttons button {
+  display: block; 
+  margin: 10px; 
+}
