@@ -6,6 +6,7 @@
 #title {
   font-size: 400%;
   text-align: center; 
+  margin-bottom: 50px; 
 
 }
 
@@ -13,3 +14,20 @@
   display: block; 
   margin: 10px; 
 }
+
+
+.grid {
+  background-color: aquamarine;
+  height: 500px; 
+  width: 500px; 
+  border-style: solid; 
+  border-color: black; 
+  display: flex; 
+}
+
+.content {
+  display: flex; 
+  justify-content: space-around; 
+  
+}
+
