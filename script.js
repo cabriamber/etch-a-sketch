@@ -60,7 +60,10 @@ let monochromeColors = ["#E3E8EA", "#BCCAD0", "#9BA8AE", "#707A7E", "#495054", "
 // all grey, from lightest to darkest 
 let cottonCandyColors = ["#FFB3DE", "#CCEFE3", "#EBC8F3", "#C9FDFF", "#FFFCC9", "#FBBED8"];
 //1)light hot pink 2)light minty green 3) easter egg purple 4) super light blue 5) baby yellow 6) another light pink 
-let peacockColors = [];
+let peacockColors = ['#C0F862',"#10a690",'#1166A3','#3d4987','402b6d','#5b066b']
+// 1)bright yellow green 2) greenish blue 3) teal 4)purple blue 4)royal purple 6) burnt yellow orange
+let sunsetColors = ["#300350","#94167F","#E93479","F9AC53","#F62E97","#153CB4"]
+//1)Russian Violet 2)MardiGras Dark Pink 3)Cerise Light Pink 4) Rajah (sand color) 5) Persian Rose (bright pink) 6) Persian Blue (close to royal blue)
 
 
 function colorChange(e) {
@@ -80,9 +83,12 @@ function colorChange(e) {
   }
   else if (colorScheme === "cottonCandy") {
     e.target.style.backgroundColor = `${cottonCandyColors[randomNumber]}`; 
+    console.log(cottonCandyColors[randomNumber]); 
 
   }
   else if (colorScheme === "peacock") {
+    e.target.style.backgroundColor = `${peacockColors[randomNumber]}`; 
+    console.log(peacockColors[randomNumber])
 
   }
   else if (colorScheme === "eraser") {
@@ -105,8 +111,8 @@ function setUpGrid(size) {
     newBox.addEventListener('mouseover', () => randomNumber = getRandom());
     newBox.addEventListener('mouseover', () => console.log(randomNumber)); 
     newBox.addEventListener('mousedown', colorChange); 
-    newBox.style.borderStyle = "solid"; 
-    newBox.style.borderColor = "black"; 
+    //newBox.style.borderStyle = "solid"; 
+    //newBox.style.borderColor = "white"; 
     //newBox.textContent = `${i}`; 
     grid.append(newBox); 
     
