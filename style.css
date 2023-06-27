@@ -1,6 +1,7 @@
 body {
   text-align: center;
-  background-color:#E5E4E2
+  background-color:#E5E4E2;
+  font-family: georgia, serif; 
 }
 
 .subheading {
@@ -26,6 +27,7 @@ button {
   /*background-color: #ededed;  */
   background-color: #656e76;
   color: #ebecee;
+  font-size: 
 }
 
 button:hover {
@@ -65,6 +67,7 @@ button:hover {
   border-color: black; 
   display: grid; 
   border-width: 5px; 
+  background-color: white; 
   
 
    
