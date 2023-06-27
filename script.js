@@ -9,6 +9,8 @@ document.body.onmouseup = () => (mouseDown = false);
 
 let colorScheme = "black";
 
+let boxLines = false; 
+
 let desertColors = ["#C75112", "#9F1515", "#A92A86", "#D18D3F", "#FFF245", "#F07D00"];
 // 1)burnt orange, 2)dark red, 3)sunset pink, 4)tree bark brown, 5)bright orange
 let monochromeColors = ["#E3E8EA", "#BCCAD0", "#9BA8AE", "#707A7E", "#495054", "#343A40"];
@@ -112,6 +114,9 @@ sundrop.addEventListener("click", () => console.log(colorScheme));
 argentina.addEventListener("click", () => colorScheme = "argentina"); 
 argentina.addEventListener("click", () => console.log(colorScheme)); 
 
+springMeadow.addEventListener("click",() => colorScheme = "springMeadow"); 
+springMeadow.addEventListener("click", () => console.log(colorScheme)); 
+
 eraser.addEventListener("click", () => colorScheme = "eraser");
 
 clearButton.addEventListener("click", eraseAll)
@@ -194,6 +199,9 @@ function colorChange(e) {
   else if (colorScheme === "sundrop") {
     e.target.style.backgroundColor = `${sunColors[randomNumber]}`; 
   }
+  else if (colorScheme === "springMeadow") {
+    e.target.style.backgroundColor = `${springMeadowColors[randomNumber]}`; 
+  }
   else if (colorScheme === "eraser") {
     e.target.style.backgroundColor = "white"; 
   }
@@ -226,6 +234,8 @@ function setUpGrid(size) {
 function clearGrid() {
   grid.innerHTML = '';
   boxLines = false; 
+  boxDisplayText = "Show Grid"; 
+  gridLines.textContent = "Show Grid"; 
 }
 
 slider.oninput = function() {
@@ -233,6 +243,7 @@ slider.oninput = function() {
   number = slider.value; 
   clearGrid();
   setUpGrid(number); 
+  
 }
 
 let boxDisplayText = "Show Grid"; 
@@ -252,7 +263,7 @@ function changeText() {
 
 setUpGrid(number); 
 
-let boxLines = false; 
+
 
 function changeLines() {
   console.log("changeLines"); 
