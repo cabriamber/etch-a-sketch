@@ -57,10 +57,13 @@ button:hover {
   
 }
 
+
+
 .bottomButtons button{
-  display: block; 
+  display: flex; 
   margin: 10px; 
   margin-top: 15px; 
+
 
 }
 .grid {
@@ -103,6 +106,7 @@ button:hover {
 .slide-title {
   margin-bottom: 20px; 
   font-size: 200%;  
+  margin-top: -20px; 
 }
 
 #sizeSlider {
