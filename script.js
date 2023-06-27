@@ -34,7 +34,7 @@ let opalPrismColors = ["#a98cda","#7937e5","#6309f5","#cfc4e1","#5d2fa8","#4d0bb
 let hauntedForestColors = ["#d5d8d8","#69896d","#3e625c","#1d443e","#0f292f","#196f3d"];
 let corporateSuitColors = ["#ede8da","#c1bbaf","#8e8c8a","#534e50","#212736","#34495e"];
 let springMeadowColors = ["#eedb07","#d8aa01","#779439","#2f530d","#29371a","#CEDA00"];
-let snowDropColors = ["#AED6F1","#ddf4ff","#4b79c0","#26408e","	#18265a","#4F60FD"];
+let snowdropColors = ["#AED6F1","#ddf4ff","#4b79c0","#26408e","	#18265a","#4F60FD"];
 let sunColors = ["#fff8e8","#fdd879","#ffb700","#9f580e","#533514","#F7DC6F"];
 let bahamaSistersColors = ["#2d1509","#e27d00","#de5700","#466300","#91ac00","#A8EE00"];
 let argentinaColors = ["#fff8e7","#6b0647", "#65483d","#ffc663","#1c5749","#34495E"];
@@ -116,6 +116,12 @@ argentina.addEventListener("click", () => console.log(colorScheme));
 
 springMeadow.addEventListener("click",() => colorScheme = "springMeadow"); 
 springMeadow.addEventListener("click", () => console.log(colorScheme)); 
+
+bahamaSisters.addEventListener("click", () => colorScheme = "bahamaSisters"); 
+bahamaSisters.addEventListener("click", () => console.log(colorScheme)); 
+
+snowdrop.addEventListener("click", () => colorScheme = "snowdrop"); 
+snowdrop.addEventListener("click", () => console.log(colorScheme)); 
 
 eraser.addEventListener("click", () => colorScheme = "eraser");
 
@@ -201,6 +207,12 @@ function colorChange(e) {
   }
   else if (colorScheme === "springMeadow") {
     e.target.style.backgroundColor = `${springMeadowColors[randomNumber]}`; 
+  }
+  else if (colorScheme === "bahamaSisters") {
+    e.target.style.backgroundColor = `${bahamaSistersColors[randomNumber]}`; 
+  }
+  else if (colorScheme === "snowdrop") {
+    e.target.style.backgroundColor = `${snowdropColors[randomNumber]}`; 
   }
   else if (colorScheme === "eraser") {
     e.target.style.backgroundColor = "white"; 
