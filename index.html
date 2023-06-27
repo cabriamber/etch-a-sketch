@@ -11,24 +11,43 @@
     <div id = "title">Etch-a-Sketch</div>
     <div class = "content" id = "content">
       <div class = "optionsBar">
-        <div class = "subheading">Options</div> 
-          <div class = "buttons">   
-            <button id = "black">Black</button>
-            <button id = "monochrome">Monchrome</button>
-            <button id = "desert">Desert</button>
-            <button id = "cottonCandy">Cotton Candy</button>
-            <button id = "peacock">Peacock</button>
-            <button id = "sunset">Sunset</button>
-            <button id = "eraser">Eraser</button>
-            <button id = "clearButton">Clear Grid</button>
-            
-            
-            <div class="slide-container">
-              <div class = "slide-title">Grid Size: </div>
-              <input type="range" value = "16" min="1" max="64" class="slider" id="sizeSlider">
-            </div>
-            <button id = "gridLines">Show Grid</button>
+        <div class = "subheading">Color Themes</div> 
+          <div class = "buttons">  
+            <div class = "leftButtons">
+              <button id = "black">Black</button>
+              <button id = "monochrome">Monchrome</button>
+              <button id = "desert">Desert</button>
+              <button id = "cottonCandy">Cotton Candy</button>
+              <button id = "peacock">Peacock</button>
+              <button id = "vaporwave">Vaporwave</button>
+              
+              
+            </div> <!--ends the left buttons div-->
+            <div class = "rightButtons">
+              <button id = "royalNights">Royal Nights</button>
+              <button id = "summerPark">Summer at the Theme Park</button>
+              <button id = "judyGarden">Judy's Flower Garden</button>
+              <button id = "opalPrism">Opal Prism</button>
+              <button id = "hautedForest">Haunted Forest</button>
+              <button id = "newOption">New Option</button>
+            </div> <!--ends the right buttons container-->
           </div> <!--end the buttons div-->
+        <div class = "subheading" id = "subheading2">Other Options</div>
+        <div class = "bottomButtons">
+          <button id = "eraser">Eraser</button>
+          <button id = "clearButton">Clear Grid</button>
+          <button id = "gridLines">Show Grid</button>
+          
+        </div> <!--ends the bottomButtons div-->
+        <div class="slide-container">
+          <div class = "slide-title">Grid Size: </div>
+          <input type="range" value = "16" min="1" max="64" class="slider" id="sizeSlider">
+      </div>
+            
+            
+          
+          
+          
       </div> <!--end the optionsBar div-->
       <div class = "grid" id = "grid"></div> 
     </div> <!--end the content div-->
