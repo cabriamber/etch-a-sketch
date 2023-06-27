@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #ededed; 
+  background-color:#E5E4E2
 }
 
 .subheading {
@@ -23,18 +23,32 @@ body {
 button {
   padding: 8px; 
   border-radius: 10px;
+  /*background-color: #ededed;  */
+  background-color: #656e76;
+  color: #ebecee;
+}
+
+button:hover {
+  box-shadow: 2px 2px #1e2023;
+  transform: scale(1.2); 
+  background-color: #7d868f;
+  
 }
 
 .buttons button {
   display: block; 
   margin: 10px; 
   margin-top: 15px; 
+  padding: 10px; 
+  flex-wrap: wrap; 
+
+ 
 }
 
 .buttons {
   margin-top: 20px; 
   display: flex; 
-  padding: 10px;  
+  
 }
 
 .bottomButtons button{
@@ -50,6 +64,8 @@ button {
   border-style: double; 
   border-color: black; 
   display: grid; 
+  border-width: 5px; 
+  
 
    
 }
@@ -78,3 +94,10 @@ button {
 }
 
 
+/* 
+Potential theme colors 
+
+Platinum	#E5E4E2
+super light grey #ededed;  
+
+previous box shadow: #566573;
