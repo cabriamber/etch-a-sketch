@@ -1,6 +1,4 @@
 /* create a 16x16 grid using Javascript */
-grid = document.getElementById("grid");
-
 let randomNumber; 
 
 let number = 16;
@@ -8,6 +6,38 @@ let number = 16;
 let mouseDown = false; 
 document.body.onmousedown = () => (mouseDown = true); 
 document.body.onmouseup = () => (mouseDown = false); 
+
+let colorScheme = "black";
+
+let desertColors = ["#C75112", "#9F1515", "#A92A86", "#D18D3F", "#FFF245", "#F07D00"];
+// 1)burnt orange, 2)dark red, 3)sunset pink, 4)tree bark brown, 5)bright orange
+let monochromeColors = ["#E3E8EA", "#BCCAD0", "#9BA8AE", "#707A7E", "#495054", "#343A40"];
+// all grey, from lightest to darkest 
+let cottonCandyColors = ["#FFB3DE", "#CCEFE3", "#EBC8F3", "#C9FDFF", "#FFFCC9", "#FBBED8"];
+//1)light hot pink 2)light minty green 3) easter egg purple 4) super light blue 5) baby yellow 6) another light pink 
+let peacockColors = ['#C0F862',"#10a690",'#1166A3','#3d4987','#402b6d','#5b066b']
+// 1)bright yellow green 2) greenish blue 3) teal 4)purple blue 4)royal purple 6) burnt yellow orange
+let vaporwaveColors = ["#300350","#94167F","#E93479","#F9AC53","#F62E97","#153CB4"]
+//1)Russian Violet 2)MardiGras Dark Pink 3)Cerise Light Pink 4) Rajah (sand color) 5) Persian Rose (bright pink) 6) Persian Blue (close to royal blue)
+let royalNightsColors = ["#B72D0F","#E0C020","#8D38AF","#F18730","#2A60A4","#8C8181"]; 
+//Drew's colors 
+let planetUtopiaColors = ["#FCB300","#f7072f","#19a2f6","#f6f619","#e843e8","#66e843"];
+// Scott's Colors 
+let judysFlowerGardenColors = ["#ef3e1b","#ef1b58","#efec1b","#9f1bef","#1bef52","#114aef"];
+//Mom's Colors
+let summerParkColors =["#e00081","#e05500","#dde000","#e03a00","#e03a00","#e00000"];
+//Nyla's Colors 
+let opalPrismColors = ["#a98cda","#7937e5","#6309f5","#cfc4e1","#5d2fa8","#4d0bba"];
+//Tiya's Colors 
+let hauntedForestColors = ["#d5d8d8","#69896d","#3e625c","#1d443e","#0f292f","#196f3d"];
+let corporateSuitColors = ["#ede8da","#c1bbaf","#8e8c8a","#534e50","#212736","#34495e"];
+let springMeadowColors = ["#eedb07","#d8aa01","#779439","#2f530d","#29371a","#CEDA00"];
+let snowDropColors = ["#AED6F1","#ddf4ff","#4b79c0","#26408e","	#18265a","#4F60FD"];
+let sunColors = ["#fff8e8","#fdd879","#ffb700","#9f580e","#533514","#F7DC6F"];
+let bahamaSistersColors = ["#2d1509","#e27d00","#de5700","#466300","#91ac00","#A8EE00"];
+let argentinaColors = ["#fff8e7","#6b0647", "#65483d","#ffc663","#1c5749","#34495E"];
+
+const grid = document.getElementById("grid");
 
 const black = document.getElementById("black"); 
 const monochrome = document.getElementById("monochrome"); 
@@ -30,12 +60,13 @@ const bahamaSisters = document.getElementById("bahamaSisters");
 const sundrop = document.getElementById("sundrop");
 const argentina = document.getElementById("argentina");
 
-
 const eraser = document.getElementById("eraser"); 
-const clearButton = document.getElementById("clearButton"); 
+const clearButton = document.getElementById("clearButton");
 
+const gridLines = document.getElementById("gridLines");
 
-let colorScheme = "black";
+let slider = document.getElementById("sizeSlider");
+
 
 black.addEventListener("click", () => colorScheme = "black"); 
 black.addEventListener("click", () => console.log(colorScheme));
@@ -81,10 +112,14 @@ sundrop.addEventListener("click", () => console.log(colorScheme));
 argentina.addEventListener("click", () => colorScheme = "argentina"); 
 argentina.addEventListener("click", () => console.log(colorScheme)); 
 
-
 eraser.addEventListener("click", () => colorScheme = "eraser");
 
 clearButton.addEventListener("click", eraseAll)
+
+gridLines.addEventListener("click", () => console.log("gridLines")); 
+gridLines.addEventListener("click", changeText);
+gridLines.addEventListener("click", changeLines); 
+
 
 function eraseAll() {
   let list = document.getElementsByClassName("gridElement")
@@ -100,40 +135,6 @@ function getRandom() { //needs no input, generates a random number 0-4
   return randomNumber; 
 
 }
-
-
-
-let desertColors = ["#C75112", "#9F1515", "#A92A86", "#D18D3F", "#FFF245", "#F07D00"];
-// 1)burnt orange, 2)dark red, 3)sunset pink, 4)tree bark brown, 5)bright orange
-let monochromeColors = ["#E3E8EA", "#BCCAD0", "#9BA8AE", "#707A7E", "#495054", "#343A40"];
-// all grey, from lightest to darkest 
-let cottonCandyColors = ["#FFB3DE", "#CCEFE3", "#EBC8F3", "#C9FDFF", "#FFFCC9", "#FBBED8"];
-//1)light hot pink 2)light minty green 3) easter egg purple 4) super light blue 5) baby yellow 6) another light pink 
-let peacockColors = ['#C0F862',"#10a690",'#1166A3','#3d4987','#402b6d','#5b066b']
-// 1)bright yellow green 2) greenish blue 3) teal 4)purple blue 4)royal purple 6) burnt yellow orange
-let vaporwaveColors = ["#300350","#94167F","#E93479","#F9AC53","#F62E97","#153CB4"]
-//1)Russian Violet 2)MardiGras Dark Pink 3)Cerise Light Pink 4) Rajah (sand color) 5) Persian Rose (bright pink) 6) Persian Blue (close to royal blue)
-let royalNightsColors = ["#B72D0F","#E0C020","#8D38AF","#F18730","#2A60A4","#8C8181"]; 
-//Drew's colors 
-let planetUtopiaColors = ["#FCB300","#f7072f","#19a2f6","#f6f619","#e843e8","#66e843"];
-// Scott's Colors 
-let judysFlowerGardenColors = ["#ef3e1b","#ef1b58","#efec1b","#9f1bef","#1bef52","#114aef"];
-//Mom's Colors
-let summerParkColors =["#e00081","#e05500","#dde000","#e03a00","#e03a00","#e00000"];
-//Nyla's Colors 
-let opalPrismColors = ["#a98cda","#7937e5","#6309f5","#cfc4e1","#5d2fa8","#4d0bba"];
-//Tiya's Colors 
-let hauntedForestColors = ["#d5d8d8","#69896d","#3e625c","#1d443e","#0f292f","#196f3d"];
-let corporateSuitColors = ["#ede8da","#c1bbaf","#8e8c8a","#534e50","#212736","#34495e"];
-let springMeadowColors = ["#eedb07","#d8aa01","#779439","#2f530d","#29371a","#CEDA00"];
-let snowDropColors = ["#AED6F1","#ddf4ff","#4b79c0","#26408e","	#18265a","#4F60FD"];
-let sunColors = ["#fff8e8","#fdd879","#ffb700","#9f580e","#533514","#F7DC6F"];
-let bahamaSistersColors = ["#2d1509","#e27d00","#de5700","#466300","#91ac00","#A8EE00"];
-let argentinaColors = ["#fff8e7","#6b0647", "#65483d","#ffc663","#1c5749","#34495E"];
-
-
-
-
 
 function colorChange(e) {
   if (e.type === 'mouseover' && !mouseDown) return
@@ -222,30 +223,77 @@ function setUpGrid(size) {
 }
 }
 
-
-
-
-
 function clearGrid() {
   grid.innerHTML = '';
-
+  boxLines = false; 
 }
-
-setUpGrid(number); 
-
-
-let slider = document.getElementById("sizeSlider");
-//slider.innerHTML = slider.value;  
-//console.log(slider.value); 
 
 slider.oninput = function() {
   console.log(slider.value); 
   number = slider.value; 
   clearGrid();
   setUpGrid(number); 
-  
 }
 
+let boxDisplayText = "Show Grid"; 
 
+function changeText() {
+  console.log("changeText"); 
+
+  if (boxDisplayText === "Show Grid") {
+    gridLines.textContent = "Hide Grid"; 
+    boxDisplayText = "Hide Grid"; 
+  }
+  else if (boxDisplayText === "Hide Grid") {
+    gridLines.textContent = "Show Grid"; 
+    boxDisplayText = "Show Grid"; 
+  }
+}
+
+/*function () {
+  console.log("changeLines"); 
+  let list = document.getElementsByClassName("gridElement");
+  for (let n = 0, n <list.length, n++) {
+    list[n].style.borderStyle = "solid"; 
+    list[n].style.borderColor = "black"; 
+  }
+} */
+
+setUpGrid(number); 
+
+let boxLines = false; 
+
+function changeLines() {
+  console.log("changeLines"); 
+  let gridElements = document.getElementsByClassName("gridElement")
+  if (boxLines === false) {
+    for (let i = 0; i < gridElements.length; i++) {
+      gridElements[i].style.borderStyle = "solid"; 
+      gridElements[i].style.borderStyle = "black"; 
+      gridElements[i].style.borderWidth = "1px"; 
+    }
+  boxLines = true; 
+  console.log(boxLines); 
+  }
+  else if (boxLines === true) {
+    for (let i = 0; i < gridElements.length; i++) {
+      gridElements[i].style.borderStyle = "none"; 
+    }
+  boxLines = false; 
+  console.log(boxLines); 
+  }
+}
+
+    /*  list[i].style.borderColor = "white"
+  
+    list[i].style.borderStyle = "solid";
+    list[i].style.borderColor = "black";  
+
+for (let i = 0; i < list.length; i++) {
+  if (list[i].style.borderColor === "black") {
+    console.log("yes"); 
+ 
+    let border = window.getComputedStyle(gridElement[0]); 
+    console.log(border); */ 
 
  
