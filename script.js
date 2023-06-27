@@ -109,7 +109,13 @@ let summerParkColors =["#e00081","#e05500","#dde000","#e03a00","#e03a00","#e0000
 let opalPrismColors = ["#a98cda","#7937e5","#6309f5","#cfc4e1","#5d2fa8","#4d0bba"];
 //Tiya's Colors 
 let hauntedForestColors = ["#d5d8d8","#69896d","#3e625c","#1d443e","#0f292f","#196f3d"];
-let corporateSuit = ["#ede8da","#c1bbaf","#8e8c8a","#534e50","#212736","#34495e"];
+let corporateSuitColors = ["#ede8da","#c1bbaf","#8e8c8a","#534e50","#212736","#34495e"];
+let springMeadowColors = ["#eedb07","#d8aa01","#779439","#2f530d","#29371a","#CEDA00"];
+let snowDropColors = ["#AED6F1","#ddf4ff","#4b79c0","#26408e","	#18265a","#4F60FD"];
+let sunColors = ["#fff8e8","#fdd879","#ffb700","#9f580e","#533514","#F7DC6F"];
+let bahamaSistersColors = ["#2d1509","#e27d00","#de5700","#466300","#91ac00","#A8EE00"];
+
+
 
 
 
