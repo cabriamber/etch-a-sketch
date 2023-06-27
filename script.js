@@ -250,15 +250,6 @@ function changeText() {
   }
 }
 
-/*function () {
-  console.log("changeLines"); 
-  let list = document.getElementsByClassName("gridElement");
-  for (let n = 0, n <list.length, n++) {
-    list[n].style.borderStyle = "solid"; 
-    list[n].style.borderColor = "black"; 
-  }
-} */
-
 setUpGrid(number); 
 
 let boxLines = false; 
@@ -284,16 +275,5 @@ function changeLines() {
   }
 }
 
-    /*  list[i].style.borderColor = "white"
-  
-    list[i].style.borderStyle = "solid";
-    list[i].style.borderColor = "black";  
-
-for (let i = 0; i < list.length; i++) {
-  if (list[i].style.borderColor === "black") {
-    console.log("yes"); 
- 
-    let border = window.getComputedStyle(gridElement[0]); 
-    console.log(border); */ 
 
  
