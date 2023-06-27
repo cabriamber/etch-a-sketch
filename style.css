@@ -95,14 +95,40 @@ button:hover {
 
 }
 
-.slide-container {
-  
-}
-
 .slide-title {
   margin-bottom: 20px; 
   font-size: 200%;  
 }
+
+#sizeSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80%; 
+  height: 15px; 
+  background-color: #818589;
+  cursor: pointer; 
+  border-radius: 10px; ;
+}
+
+.slide-container {
+  width: 100%;
+}
+
+#sizeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  height: 30px; 
+  width: 30px; 
+  background: #36454F;
+  border-radius: 10px;
+}
+
+#sizeSlider::-webkit-slider-thumb:hover {
+  transform: scale(1.2); 
+}
+
+
+
 
 
 
