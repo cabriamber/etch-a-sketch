@@ -93,8 +93,19 @@ button:hover {
  justify-content: center; 
  width: 100%; 
 
-
 }
+
+.slide-container {
+  
+}
+
+.slide-title {
+  margin-bottom: 20px; 
+  font-size: 200%;  
+}
+
+
+
 
 
 /* 
