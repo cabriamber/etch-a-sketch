@@ -20,6 +20,11 @@ body {
 
 }
 
+button {
+  padding: 8px; 
+  border-radius: 10px;
+}
+
 .buttons button {
   display: block; 
   margin: 10px; 
@@ -29,6 +34,7 @@ body {
 .buttons {
   margin-top: 20px; 
   display: flex; 
+  padding: 10px;  
 }
 
 .bottomButtons button{
@@ -39,9 +45,9 @@ body {
 }
 .grid {
 
-  height: 500px; 
-  width: 500px; 
-  border-style: solid; 
+  height: 600px; 
+  width: 600px; 
+  border-style: double; 
   border-color: black; 
   display: grid; 
 
