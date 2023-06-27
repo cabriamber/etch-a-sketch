@@ -2,6 +2,11 @@
   font-size: 200%; 
 }
 
+#subheading2 {
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+
 
 #title {
   font-size: 400%;
@@ -18,14 +23,20 @@
 
 .buttons {
   margin-top: 20px; 
+  display: flex; 
 }
 
+.bottomButtons button{
+  display: block; 
+  margin: 10px; 
+  margin-top: 15px; 
+}
 .grid {
 
   height: 500px; 
   width: 500px; 
   border-style: solid; 
-  border-color: black;
+  border-color: black; 
   display: grid; 
 
    
