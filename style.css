@@ -1,3 +1,7 @@
+body {
+  text-align: center;
+}
+
 .subheading {
   font-size: 200%; 
 }
@@ -30,6 +34,7 @@
   display: block; 
   margin: 10px; 
   margin-top: 15px; 
+
 }
 .grid {
 
