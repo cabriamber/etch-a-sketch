@@ -22,6 +22,14 @@ const summerPark = document.getElementById("summerPark");
 const judysFlowerGarden = document.getElementById("judysFlowerGarden"); 
 const opalPrism = document.getElementById("opalPrism"); 
 
+const hauntedForest = document.getElementById("hauntedForest");
+const corporateSuit = document.getElementById("corporateSuit");
+const springMeadow = document.getElementById("springMeadow"); 
+const snowdrop = document.getElementById("snowdrop"); 
+const bahamaSisters = document.getElementById("bahamaSisters"); 
+const sundrop = document.getElementById("sundrop");
+const argentina = document.getElementById("argentina");
+
 
 const eraser = document.getElementById("eraser"); 
 const clearButton = document.getElementById("clearButton"); 
@@ -61,10 +69,17 @@ judysFlowerGarden.addEventListener("click", () => console.log(colorScheme));
 opalPrism.addEventListener("click", () => colorScheme = "opalPrism"); 
 opalPrism.addEventListener("click", () => console.log(colorScheme)); 
 
+hauntedForest.addEventListener("click", () => colorScheme = "hauntedForest");
+hauntedForest.addEventListener("click", () => console.log(colorScheme)); 
 
+corporateSuit.addEventListener("click", () => colorScheme = "corporateSuit");
+corporateSuit.addEventListener("click", () => console.log(colorScheme)); 
 
+sundrop.addEventListener("click", () => colorScheme = "sundrop"); 
+sundrop.addEventListener("click", () => console.log(colorScheme));
 
-
+argentina.addEventListener("click", () => colorScheme = "argentina"); 
+argentina.addEventListener("click", () => console.log(colorScheme)); 
 
 
 eraser.addEventListener("click", () => colorScheme = "eraser");
@@ -114,6 +129,7 @@ let springMeadowColors = ["#eedb07","#d8aa01","#779439","#2f530d","#29371a","#CE
 let snowDropColors = ["#AED6F1","#ddf4ff","#4b79c0","#26408e","	#18265a","#4F60FD"];
 let sunColors = ["#fff8e8","#fdd879","#ffb700","#9f580e","#533514","#F7DC6F"];
 let bahamaSistersColors = ["#2d1509","#e27d00","#de5700","#466300","#91ac00","#A8EE00"];
+let argentinaColors = ["#fff8e7","#6b0647", "#65483d","#ffc663","#1c5749","#34495E"];
 
 
 
@@ -164,6 +180,18 @@ function colorChange(e) {
   }
   else if (colorScheme === "opalPrism") {
     e.target.style.backgroundColor = `${opalPrismColors[randomNumber]}`; 
+  }
+  else if (colorScheme === "hauntedForest") {
+    e.target.style.backgroundColor = `${hauntedForestColors[randomNumber]}`;
+  }
+  else if (colorScheme === "corporateSuit") {
+    e.target.style.backgroundColor = `${corporateSuitColors[randomNumber]}`;
+  }
+  else if (colorScheme === "argentina") {
+    e.target.style.backgroundColor = `${argentinaColors[randomNumber]}`;
+  }
+  else if (colorScheme === "sundrop") {
+    e.target.style.backgroundColor = `${sunColors[randomNumber]}`; 
   }
   else if (colorScheme === "eraser") {
     e.target.style.backgroundColor = "white"; 
