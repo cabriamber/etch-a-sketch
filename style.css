@@ -2,10 +2,11 @@ body {
   text-align: center;
   background-color:#E5E4E2;
   font-family: georgia, serif; 
+  height: 100vh; 
 }
 
 #title {
-  margin-top: 40px; 
+  margin-top: 20px; 
 }
 
 .subheading {
@@ -31,7 +32,7 @@ button {
   /*background-color: #ededed;  */
   background-color: #656e76;
   color: #ebecee;
-  font-size: 
+  font-size: ;
 }
 
 button:hover {
@@ -59,13 +60,17 @@ button:hover {
 
 
 
-.bottomButtons button{
+#bottomButtons{
   display: flex; 
   margin: 10px; 
   margin-top: 15px; 
-
+  gap: 6vw;  
 
 }
+
+#bottomButtons button {
+}
+
 .grid {
 
   height: 600px; 
@@ -75,7 +80,7 @@ button:hover {
   display: grid; 
   border-width: 5px; 
   background-color: white; 
-  margin-top: 50px; 
+  margin-top: 10px; 
   
 
    
@@ -93,7 +98,7 @@ button:hover {
 }
 
 .footer {
- position: absolute; 
+ position: relative; 
  bottom: 0; 
  left: 0; 
  display: flex; 
